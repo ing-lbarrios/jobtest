@@ -1,0 +1,5 @@
+<h1>My post list</h1>
+
+<% @posts.each do |post| %>
+  <h2>Post number <%= post[:id] %>: Click <a href="<%= post_path post[:id] %>">Here</a>
+<% end %>

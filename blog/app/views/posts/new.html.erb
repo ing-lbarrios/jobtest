@@ -1,0 +1,8 @@
+<h1>Create a new post</h1>
+<%= form_tag '/posts', method: 'post' do %>
+  <%= label_tag(:author_id, "Select author:") %>
+  <% options = @authors[:authors].map { |author| [author[:name], author[:id]] } %>
+  <%= select_tag(:author_id, options_for_select(options)) %>
+  <%= text_area_tag(:content, nil, size: '80x80') %>
+  <%= submit_tag('Create a post') %>
+<% end %>
