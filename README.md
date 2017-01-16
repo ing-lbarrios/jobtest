@@ -42,7 +42,8 @@ DELETE /authors/:id(.:format) authors#destroy
 
 ### Tasks 
 
-* Fork this repo. go ahead and resolve and complete these tasks. You can work on them on any order, and it's no necessary to complete all of them.
+* Fork this repo. 
+* Go ahead and resolve and complete these tasks. You can work on them on any order, is not necessary to complete all of them.
 * *Posts* CRUD is almost done. Add missing to code to submit a post and display it.
 * SuperAgent class is huge, DRY it up and fix whatever you see is not correct.
 * SuperAgent class need some tests. Look at the example `spec/lib/super_agent_spec.rb`.
