@@ -1,14 +1,14 @@
 # jobtest
 A beautiful blog system with APIs
 
-# Run it!
+### Run it!
 
 * To run the posts API, go to the posts folder and run `rails server -p 5000`.
 * To run the blog app, go to the blog folder and run `rails server`.
 
 The posts API is consumed by an Client class called `SuperAgent`, located in `lib/`.
 
-# Routes for (Blog)
+### Routes for (Blog)
 
 ```bash
 Prefix Verb   URI Pattern               Controller#Action
@@ -22,7 +22,7 @@ PUT    /posts/:id(.:format)      posts#update
 DELETE /posts/:id(.:format)      posts#destroy
 ```
 
-# Routes for (Posts API)
+### Routes for (Posts API)
 
 ```bash
 Prefix Verb   URI Pattern            Controller#Action
@@ -39,3 +39,15 @@ PATCH  /authors/:id(.:format) authors#update
 PUT    /authors/:id(.:format) authors#update
 DELETE /authors/:id(.:format) authors#destroy
 ```
+
+### Tasks 
+
+* Fork this repo. go ahead and resolve and complete these tasks. You can work on them on any order, and it's no necessary to complete all of them.
+* *Posts* CRUD is almost done. Add missing to code to submit a post and display it.
+* SuperAgent class is huge, DRY it up and fix whatever you see is not correct.
+* SuperAgent class need some tests. Look at the example `spec/lib/super_agent_spec.rb`.
+* In order to create posts you need some authors in your database. Create a rake task in post API to achieve this.
+* Check *Posts* API models (author, post) and look for other way to improve validations.
+
+* When you're done, create a pull request against base fork `estebanz01/jobtest`
+
