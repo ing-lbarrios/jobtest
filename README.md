@@ -16,6 +16,11 @@ A beautiful blog system with APIs
 
 ### Run it!
 
+* In order to run these apps you need:
+1. ruby (2.2.0 at least)
+2. sqlite (you can change database.yml to work with another db if you want)
+
+
 * To run the posts API, go to the posts folder and run `rails server -p 5000`.
 * To run the blog app, go to the blog folder and run `rails server`.
 
