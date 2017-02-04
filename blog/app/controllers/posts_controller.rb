@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    puts SuperAgent.retrieve_posts
     @posts = SuperAgent.retrieve_posts[:posts][:posts]
   end
 
@@ -9,5 +10,9 @@ class PostsController < ApplicationController
 
   def new
     @authors = SuperAgent.retrieve_authors
+  end
+  
+  def create
+    SuperAgent.create_post(params)
   end
 end

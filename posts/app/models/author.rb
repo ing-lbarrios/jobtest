@@ -1,4 +1,8 @@
 class Author < ApplicationRecord
+  validates :name, presence: true
+  validates :city, presence: true
+  validates :birth_date, presence: true
+  validates_format_of :birth_date, :with => /\d{2}\/\d{2}\/\d{4}/, :message => "^Date must be in the following format: mm/dd/yyyy"
   before_save :validate_name
   before_save :validate_birth_date
 

@@ -1,11 +1,10 @@
 class Post < ApplicationRecord
-  before_save :validate_author
-
+  validates :author_id, presence: true
+  validates :content, presence: true
+  validate :validate_author
+  
   def validate_author
     author = Author.where("ID IN (#{author_id})").last
-
-    unless author_id.nil? || author.nil?
-      throw :abort
-    end
+    errors.add(:base, "the author does not exist") if author.nil?  
   end
 end
